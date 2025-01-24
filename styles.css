@@ -1,7 +1,7 @@
 /* Modern color palette */
 :root {
     --primary: #00B2CA;      /* Modern teal */
-    --secondary: #FF8A5B;    /* Soft coral */
+    --secondary: purple;    /* Soft coral */
     --background: #F8FAFB;   /* Light grayish-blue */
     --surface: #FFFFFF;      /* White */
     --text: #2D3436;        /* Dark gray */
