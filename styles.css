@@ -1,0 +1,140 @@
+/* Modern color palette */
+:root {
+    --primary: #00B2CA;      /* Modern teal */
+    --secondary: #FF8A5B;    /* Soft coral */
+    --background: #F8FAFB;   /* Light grayish-blue */
+    --surface: #FFFFFF;      /* White */
+    --text: #2D3436;        /* Dark gray */
+    --text-secondary: #636E72; /* Medium gray */
+    --success: #4ECDC4;     /* Mint */
+    --shadow: rgba(149, 157, 165, 0.1);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    text-align: center;
+    background-color: var(--surface);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow);
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.timer {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 2rem 0;
+    color: var(--primary);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+}
+
+.controls button, .mode button {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+}
+
+.controls button:hover, .mode button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(108, 99, 255, 0.3);
+}
+
+.controls button:active, .mode button:active {
+    transform: translateY(0);
+}
+
+#reset {
+    background-color: var(--secondary);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);
+}
+
+#reset:hover {
+    box-shadow: 0 6px 16px rgba(255, 107, 107, 0.3);
+}
+
+#mode-toggle {
+    margin-top: 1.5rem;
+    background-color: var(--success);
+    box-shadow: 0 4px 12px rgba(0, 184, 148, 0.2);
+}
+
+#mode-toggle:hover {
+    box-shadow: 0 6px 16px rgba(0, 184, 148, 0.3);
+}
+
+#mode-toggle.work-mode {
+    background-color: var(--primary);
+}
+
+#mode-toggle.rest-mode {
+    background-color: var(--success);
+}
+
+.status {
+    margin-top: 1.5rem;
+}
+
+#status-text {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.mode {
+    margin-top: 1rem;
+}
+
+.mode button {
+    background-color: #808080;
+}
+
+.mode button.active {
+    opacity: 0.8;
+}
+
+#pause {
+    background-color: #f44336;
+}
+
+#pause:hover {
+    background-color: #da190b;
+}
+
+#work {
+    background-color: #2196F3;
+}
+
+#work:hover {
+    background-color: #1976D2;
+}
+
+#work.active {
+    background-color: #2196F3;
+} 
