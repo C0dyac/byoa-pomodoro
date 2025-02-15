@@ -45,6 +45,8 @@ h1 {
     color: var(--primary);
     font-variant-numeric: tabular-nums;
     letter-spacing: -2px;
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
 }
 
 .controls button, .mode button {

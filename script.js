@@ -13,12 +13,20 @@ const modeToggleButton = document.getElementById('mode-toggle');
 function updateDisplay() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
-    minutesDisplay.textContent = minutes.toString().padStart(2, '0');
-    secondsDisplay.textContent = seconds.toString().padStart(2, '0');
+    const minutesStr = minutes.toString().padStart(2, '0');
+    const secondsStr = seconds.toString().padStart(2, '0');
+    
+    // Update the display elements
+    minutesDisplay.textContent = minutesStr;
+    secondsDisplay.textContent = secondsStr;
+    
+    // Update the page title
+    document.title = `${minutesStr}:${secondsStr} - Pomodoro Timer`;
 }
 
 function startTimer() {
     if (timerId === null) {
+        startButton.textContent = 'Pause';
         timerId = setInterval(() => {
             timeLeft--;
             updateDisplay();
@@ -30,6 +38,9 @@ function startTimer() {
                 toggleMode();
             }
         }, 1000);
+    } else {
+        pauseTimer();
+        startButton.textContent = 'Start';
     }
 }
 
